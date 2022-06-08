@@ -93,22 +93,10 @@ class SinglyLinkedList {
     this.length++;
     return true;
   }
-  remove(index) {
-    if (index < 0 || index >= this.length) return undefined;
-    if (index === 0) return history.shift();
-    if (index === this.length - 1) return this.pop();
-    let previousNode = this.get(index - 1);
-    let removed = previousNode.next;
-    previousNode.next = removed.next;
-    this.length--;
-    return removed;
-  }
-  
 }
 var list = new SinglyLinkedList();
 list.push('hi');
 list.push('there');
 list.push('!');
 list.insert(1, '32');
-list.remove(1);
 console.log(list);

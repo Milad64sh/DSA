@@ -103,7 +103,6 @@ class SinglyLinkedList {
     this.length--;
     return removed;
   }
-  
 }
 var list = new SinglyLinkedList();
 list.push('hi');
